@@ -1,5 +1,7 @@
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
 
           <div class="publications">
-            <h2>selected publications</h2>
+            <h2>{{ t.selected_publications }}</h2>
             {% bibliography -f papers -q @*[selected=true]* %}
           </div>

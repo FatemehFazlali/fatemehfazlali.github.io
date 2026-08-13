@@ -1,8 +1,13 @@
 ---
 layout: parse
 ---
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
+{% assign page_dir = 'ltr' %}
+{% if lang == 'fa' %}
+  {% assign page_dir = 'rtl' %}
+{% endif %}
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="{{ lang }}" dir="{{ page_dir }}">
 
   <!-- Head -->
   <head>
@@ -10,6 +15,9 @@ layout: parse
     <meta http-equiv="refresh" content="3; url={{ site.baseurl | prepend: site.url }}/" />
   {%- endif -%}
   {% include head.html %}
+  {%- if lang == 'fa' -%}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+  {%- endif -%}
   </head>
 
   <!-- Body -->

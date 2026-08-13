@@ -1,24 +1,32 @@
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign footer_first = site.first_name %}
+{% assign footer_last = site.last_name %}
+{% if lang == 'fa' %}
+  {% assign footer_first = site.first_name_fa %}
+  {% assign footer_last = site.last_name_fa %}
+{% endif %}
     {% if site.footer_fixed %}
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
+        &copy; {{ t.copyright }} {{ site.time | date: '%Y' }} {{ footer_first }} {{ footer_last }}. {{ site.footer_text }}
         {%- if site.impressum_path -%}
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
         {%- endif -%}
         {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
+        {{ t.last_updated }}: {{ "now" | date: '%B %d, %Y' }}.
         {%- endif %}
       </div>
     </footer>
     {%- else -%}
     <footer class="sticky-bottom mt-5">
       <div class="container">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
+        &copy; {{ t.copyright }} {{ site.time | date: '%Y' }} {{ footer_first }} {{ footer_last }}. {{ site.footer_text }}
         {%- if site.impressum_path -%}
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
         {%- endif -%}
         {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
+        {{ t.last_updated }}: {{ "now" | date: '%B %d, %Y' }}.
         {%- endif %}
       </div>
     </footer>

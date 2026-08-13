@@ -1,18 +1,18 @@
 ---
 layout: page
-permalink: /projects/
-title: Research
+permalink: /fa/projects/
+title: پژوهش
 page_id: projects
-lang: en
+lang: fa
 lang_ref: projects
-description: Research themes in teacher education and technology-enhanced language learning.
+description: محورهای پژوهشی در تربیت معلم و یادگیری زبان با پشتیبانی فناوری.
 nav: true
 nav_order: 4
 horizontal: false
 ---
 
 <div class="projects">
-  {%- assign lang_projects = site.projects | where: "lang", "en" -%}
+  {%- assign lang_projects = site.projects | where: "lang", "fa" -%}
   {%- assign sorted_projects = lang_projects | sort: "importance" -%}
   <div class="grid">
     {%- for project in sorted_projects -%}

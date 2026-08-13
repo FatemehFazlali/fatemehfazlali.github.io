@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+gem 'ostruct'
+gem 'logger'
+gem 'csv'
+gem 'base64'
 group :jekyll_plugins do
     gem 'jekyll'
     gem 'jekyll-archives'

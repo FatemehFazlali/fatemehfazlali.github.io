@@ -1,0 +1,80 @@
+/*******************************************************************************
+ * Persian / RTL support
+ ******************************************************************************/
+
+html[lang="fa"] body {
+  font-family: "Vazirmatn", "Tahoma", "Segoe UI", sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] {
+  .navbar .navbar-nav {
+    margin-left: 0 !important;
+    margin-right: auto;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  .navbar-toggler {
+    margin-left: 0 !important;
+    margin-right: auto;
+  }
+
+  .profile.float-right {
+    float: left !important;
+    margin-right: 0;
+    margin-left: 1.5rem;
+  }
+
+  .profile.float-left {
+    float: right !important;
+    margin-left: 0;
+    margin-right: 1.5rem;
+  }
+
+  .news table th,
+  .news table td,
+  .post-title,
+  .post-header,
+  .publications,
+  .clearfix {
+    text-align: right;
+  }
+
+  blockquote {
+    border-left: none;
+    border-right: 2px solid var(--global-theme-color);
+  }
+
+  .lang-switch {
+    margin-right: 0.75rem;
+    margin-left: 0;
+  }
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    padding: 0.15rem 0.55rem;
+    font-size: 0.85rem;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}

@@ -1,25 +1,31 @@
-          
+{% assign lang = page.lang | default: site.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+
           <div class="news">
-            <h2>news</h2>
-            {% if site.news != blank -%} 
+            <h2>{{ t.news }}</h2>
+            {% assign lang_news = site.news | where: "lang", lang %}
+            {% if lang_news == blank or lang_news.size == 0 -%}
+              {% assign lang_news = site.news %}
+            {%- endif %}
+            {% if lang_news != blank -%}
             <div class="table-responsive">
               <table class="table table-sm table-borderless">
-              {%- assign news = site.news | reverse -%} 
-              {% for item in news limit: site.news_limit %} 
+              {%- assign news = lang_news | sort: "date" | reverse -%}
+              {% for item in news limit: site.news_limit %}
                 <tr>
                   <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
                   <td>
-                    {% if item.inline -%} 
+                    {% if item.inline -%}
                       {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                    {%- else -%} 
+                    {%- else -%}
                       <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    {%- endif %} 
+                    {%- endif %}
                   </td>
                 </tr>
-              {%- endfor %} 
+              {%- endfor %}
               </table>
             </div>
-          {%- else -%} 
-            <p>No news so far...</p>
-          {%- endif %} 
+          {%- else -%}
+            <p>{{ t.no_news }}</p>
+          {%- endif %}
           </div>

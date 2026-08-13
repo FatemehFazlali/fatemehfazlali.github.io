@@ -1,11 +1,11 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
+permalink: /fa/publications/
+title: مقالات
 page_id: publications
-lang: en
+lang: fa
 lang_ref: publications
-description: Selected and recent publications in reverse chronological order.
+description: فهرست مقالات به ترتیب زمانی معکوس.
 years: [2024, 2020, 2018]
 nav: true
 nav_order: 2

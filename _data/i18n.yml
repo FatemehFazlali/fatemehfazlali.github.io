@@ -1,0 +1,33 @@
+en:
+  about: About
+  publications: Publications
+  teaching: Teaching
+  projects: Research
+  news: News
+  selected_publications: Selected publications
+  language: English
+  switch_to: فارسی
+  copyright: Copyright
+  last_updated: Last updated
+  no_news: No news so far...
+  contact_note: Best reached by email or LinkedIn.
+  name: Fatemeh Fazlali
+  first_name: Fatemeh
+  last_name: Fazlali
+
+fa:
+  about: درباره من
+  publications: مقالات
+  teaching: تدریس
+  projects: پژوهش
+  news: آخرین به‌روزرسانی‌ها
+  selected_publications: مقاله منتخب
+  language: فارسی
+  switch_to: English
+  copyright: حق نشر
+  last_updated: آخرین به‌روزرسانی
+  no_news: هنوز خبری ثبت نشده است...
+  contact_note: بهترین راه ارتباط، ایمیل یا لینکدین است.
+  name: فاطمه فضلعلی
+  first_name: فاطمه
+  last_name: فضلعلی
