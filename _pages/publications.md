@@ -5,11 +5,13 @@ title: Publications
 page_id: publications
 lang: en
 lang_ref: publications
-description: Selected and recent publications in reverse chronological order.
-years: [2024, 2020, 2018]
+description: Complete list of publications from Google Scholar, in reverse chronological order.
+years: [2026, 2025, 2024, 2023, 2022, 2020, 2019, 2018, 2014]
 nav: true
 nav_order: 2
 ---
+
+<p>Full profile on <a href="https://scholar.google.com/citations?user=mZzvI4MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
 <div class="publications">
 
